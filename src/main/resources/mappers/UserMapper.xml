@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.jxau.wechatdemo.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.jxau.wechatdemo.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+    </resultMap>
+
+    <insert id="add" parameterType="com.example.jxau.wechatdemo.entity.User">
+        insert into user (name , age) values (#{name}, #{age});
+    </insert>
+
+    <delete id="del" parameterType="java.lang.Integer">
+        delete from user where id = #{id};
+    </delete>
+
+    <update id="edit" parameterType="com.example.jxau.wechatdemo.entity.User">
+        update user set name = #{name}, age = #{age} where id = #{id};
+    </update>
+
+    <select id="findAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select * from user where id = #{id};
+    </select>
+
+    <select id="find" resultMap="BaseResultMap">
+        select * from user;
+    </select>
+
+</mapper>
