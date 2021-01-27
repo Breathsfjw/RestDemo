@@ -1,0 +1,24 @@
+#服务器端口
+server:
+  port: 8082
+
+
+#数据库配置
+spring:
+  datasource:
+    username: root
+    password: 12345678
+    url: jdbc:mysql://localhost:3306/fxd?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: com.example.jxau.wechatdemo.entity
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
