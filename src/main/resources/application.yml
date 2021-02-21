@@ -1,10 +1,10 @@
 spring:
   profiles:
     active: dev
+#  自定义thymeleaf模板界面
+#  thymeleaf:
+#    view-names: /*
+#    cache: false
+#    prefix: /WEB-INF/html
 
-
-  thymeleaf:
-    view-names: /*
-    cache: false
-    prefix: /WEB-INF/html
 
