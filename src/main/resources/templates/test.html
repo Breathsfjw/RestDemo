@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymekeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:text="${msg}"></div>
+<div th:utext="${msg1}"></div>
+<hr>
+<div th:each="user:${msg2}" th:text="${user}"></div>
+</body>
+</html>

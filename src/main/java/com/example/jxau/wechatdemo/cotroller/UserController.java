@@ -19,8 +19,13 @@ public class UserController {
     private UserService userService;
 
     @PutMapping("/user")
-    public boolean addUser(@RequestBody User user) {
-        return userService.add(user);
+    public void addUser(@RequestBody User user) {
+        try {
+            userService.add(user);
+        }catch (Exception e){
+            System.out.println("bbbbbbbbbbbbb");
+        }
+        System.out.println("aaaaaaaaaaaaaaa");
     }
 
     @DeleteMapping("/user")
